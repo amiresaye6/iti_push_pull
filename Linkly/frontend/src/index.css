@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles to mimic WhatsApp Web */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 20, 26, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 20, 26, 0.35);
+}
+
+/* Custom styles for chat background repeating pattern */
+.chat-bg {
+  background-color: #efeae2;
+  background-image: radial-gradient(rgba(11, 20, 26, 0.04) 15%, transparent 15%), radial-gradient(rgba(11, 20, 26, 0.04) 15%, transparent 15%);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Global resets for webapp mode */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: #eae6df;
+}
+
+/* Slide in/out transition keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.25s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-out forwards;
+}

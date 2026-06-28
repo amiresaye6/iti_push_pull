@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Smile, Send, Paperclip, MoreVertical, Phone, Video, Search } from 'lucide-react';
+import { Smile, Send, Paperclip, MoreVertical, Phone, Video, Search, Users } from 'lucide-react';
 import { useChat } from '../context/ChatContext';
 import { useSocket } from '../context/SocketContext';
 import MessageBubble from './MessageBubble';
